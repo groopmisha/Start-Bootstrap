@@ -1,0 +1,234 @@
+.fw-checkbox-float-left div {
+    float: left;
+    margin-right: 15px;
+}
+
+.fw-backend-options-group.border-bottom-none, .border-bottom-none {
+    border-bottom: none;
+}
+
+#fw-backend-options-group-padding_group .fw-backend-option {
+    display: inline-block;
+}
+
+#fw-backend-options-group-padding_group .fw-option-width-short {
+    width: 40px !important;
+}
+
+#fw-backend-options-group-padding_group .fw-backend-option-type-html {
+    float: left;
+    padding-right: 0;
+    width: 14%;
+}
+
+#fw-options-tab-styling-options #fw-backend-options-group-padding_group .fw-backend-option-type-html {
+    width: 15%;
+}
+
+#fw-backend-options-group-padding_group .fw-backend-option-desc {
+    margin-left: 0;
+}
+
+#fw-backend-options-group-padding_group .fw-backend-option.fw-backend-option-type-short-text {
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-bottom: 15px;
+}
+
+#fw-edit-options-modal-opacity_bg_color,
+#fw-edit-options-modal-overlay_opacity,
+#fw-edit-options-modal-bg_opacity,
+#fw-edit-options-modal-image-type-picker-fw-imagebox-2-opacity,
+#fw-edit-options-modal-map_zoom,
+#fw-option-slider-image-video-slider-custom-settings-overlay_options-yes-overlay_opacity,
+#fw-option-general_page_header-posts_header_overlay_options-yes-posts_header_overlay_opacity_image,
+#fw-edit-options-modal-image-type-picker-fw-imagebox-1-image-box-bg-bg-on-bg-opacity,
+#fw-edit-options-modal-background_options-video-overlay_options-yes-overlay_opacity_video,
+#fw-option-footer_settings-footer_bg-image-overlay_options-yes-overlay_opacity_image,
+#fw-option-footer_settings-show_menu_bar-yes-menu_bar_bg-image-overlay_options-yes-overlay_opacity_image,
+#fw-option-footer_settings-show_footer_widgets-yes-footer_widgets_bg-image-overlay_options-yes-overlay_opacity_image,
+#fw-edit-options-modal-background_options-image-overlay_options-yes-overlay_opacity_image,
+#fw-option-general_posts_header-posts_header_overlay_options-yes-posts_header_overlay_opacity_image,
+#fw-option-general_portfolio_header-posts_header_overlay_options-yes-posts_header_overlay_opacity_image {
+    width: 280px;
+}
+
+@media (max-width: 768px) {
+    /* responsive for column options */
+    #fw-backend-options-group-padding_group .fw-backend-option-type-html {
+        float: left;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    #fw-backend-options-group-padding_group .fw-backend-option.fw-backend-option-type-short-text {
+        padding-left: 26px;
+    }
+}
+
+#fw-backend-option-fw-option-color_settings-color_1,
+#fw-backend-option-fw-option-color_settings-color_2,
+#fw-backend-option-fw-option-color_settings-color_3,
+#fw-backend-option-fw-option-color_settings-color_4,
+#fw-backend-option-fw-option-website_backgroud-website_bg_color {
+    padding-bottom: 0;
+}
+
+#fw-backend-option-fw-option-footer_settings-html_label,
+#fw-backend-option-fw-option-footer_settings-copyright_bottom {
+    float: left;
+}
+
+#fw-backend-option-fw-option-footer_settings-copyright_top {
+    padding-right: 0;
+}
+
+#fw-backend-option-fw-option-footer_settings-html_label {
+    padding-right: 0;
+    width: 14.5%;
+}
+
+#fw-backend-option-fw-option-footer_settings-footer_bg_color {
+    clear: both;
+}
+
+.fw-clearfix-div {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.fw-premium-products img {
+    width: 195px;
+    max-width: 195px;
+    margin-right: 6px;
+}
+
+.fw-premium-products-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px 10px 21px;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.fw-premium-products-close:before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    background: none;
+    color: #b4b9be;
+    content: "\f153";
+    display: block;
+    font: normal 16px/20px dashicons;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fw-premium-products-close:hover:before {
+    color: #c00;
+}
+
+.fw-list-premium-themes {
+    margin-top: 16px;
+}
+
+.fw-premium-products.welcome-panel h3 {
+    margin-top: 10px;
+}
+
+.fw-premium-products .dashicons:before {
+    color: #82878c;
+    font: 400 20px/1 dashicons;
+    speak: none;
+    display: inline-block;
+    padding: 0 10px 0 0;
+    top: -1px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none !important;
+    vertical-align: top;
+}
+
+.fw-premium-products .dashicons {
+    width: auto;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.type-fw-slider .slider_design img {
+    max-width: 160px;
+}
+
+.wp-core-ui .button.button-primary.fw-button-cta-dashboard {
+    background: #f25d00;
+    border-color: #f25d00 #f25d00 #f25d00;
+    -webkit-box-shadow: 0 1px 0 #f25d00;
+    box-shadow: 0 1px 0 #f25d00;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #f25d00, 1px 0 1px #f25d00, 0 1px 1px #f25d00, -1px 0 1px #f25d00;
+    -webkit-box-shadow: 0 2px 0 #f25d00;
+    box-shadow: 0 2px 0 #f25d00;
+}
+
+.wp-core-ui .button.button-primary.fw-button-cta-dashboard:active,
+.wp-core-ui .button.button-primary.fw-button-cta-dashboard:hover {
+    background: #f25d00;
+}
+
+.wp-core-ui .button.button-primary.fw-button-cta-dashboard:active {
+    box-shadow: inset 0 3px 0 #f25d00;
+}
+
+/* Brizy Custom Notice */
+.tf-brizy-notice {
+    padding: 20px;
+    background: #e4e5f1;
+    font-size: 18px;
+}
+.tf-brizy-notice .tf-brizy-logo,
+.tf-brizy-notice .tf-brizy-message,
+.tf-brizy-notice .tf-brizy-cta {
+    display: inline-block;
+    vertical-align: middle;
+}
+.tf-brizy-notice .tf-brizy-brand-color {
+    color: #d62b63;
+}
+.tf-brizy-notice a {
+    font-size: 15px;
+    color: #0ea3d5;
+    text-decoration: underline;
+}
+.tf-brizy-notice a:hover {
+    text-decoration: none;
+}
+.tf-brizy-notice .tf-brizy-brand-button {
+    background: #d62b63;
+    padding: 8px;
+    color: #fff;
+}
+.tf-brizy-notice .tf-brizy-message {
+    padding-left: 50px;
+}
+.tf-brizy-notice .tf-brizy-cta {
+    float: right;
+    padding-top: 18px;
+    padding-right: 50px;
+}
+.tf-brizy-notice .tf-brizy-separator {
+    color: #bfc1cc;
+    padding-left: 8px;
+    padding-right: 10px;
+}
