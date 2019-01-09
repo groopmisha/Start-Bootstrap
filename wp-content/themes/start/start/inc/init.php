@@ -21,9 +21,9 @@ class Start_Theme_Includes {
 			self::include_child_first( '/helpers.php' );
 			self::include_child_first( '/hooks.php' );
 			self::include_child_first( '/theme-hooks.php' );
+			self::include_child_first( '/widgets.php' );
 
 			add_action( 'init', array( __CLASS__, '_action_init' ) );
-			add_action( 'widgets_init', array( __CLASS__, '_action_widgets_init' ) );
 		}
 
 		/**
@@ -137,45 +137,6 @@ class Start_Theme_Includes {
 		self::include_child_first( '/menus.php' );
 	}
 
-	/**
-	 * @internal
-	 */
-	public static function _action_widgets_init() {
-		{
-			$paths = array();
-
-			if ( is_child_theme() ) {
-				$paths[] = self::get_child_path( '/widgets' );
-			}
-
-			$paths[] = self::get_parent_path( '/widgets' );
-		}
-
-		$included_widgets = array();
-
-		foreach ( $paths as $path ) {
-			$dirs = glob( $path . '/*', GLOB_ONLYDIR );
-
-			if ( ! $dirs ) {
-				continue;
-			}
-
-			foreach ( $dirs as $dir ) {
-				$dirname = basename( $dir );
-
-				if ( isset( $included_widgets[ $dirname ] ) ) {
-					// this happens when a widget in child theme wants to overwrite the widget from parent theme
-					continue;
-				} else {
-					$included_widgets[ $dirname ] = true;
-				}
-
-				self::include_isolated( $dir . '/class-widget-' . $dirname . '.php' );
-
-				register_widget( 'Widget_' . self::dirname_to_classname( $dirname ) );
-			}
-		}
-	}
 }
 
 Start_Theme_Includes::init();

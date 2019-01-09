@@ -335,67 +335,6 @@ if ( ! function_exists( 'start_filter_theme_wp_title' ) ) :
 endif;
 add_filter( 'wp_title', 'start_filter_theme_wp_title', 10, 2 );
 
-
-if ( ! function_exists( 'start_action_theme_widgets_init' ) ) :
-	/**
-	 * Register widget areas (General and Footers widget areas)
-	 * @internal
-	 */
-	function start_action_theme_widgets_init() {
-		//shows html before widget
-		$beforeWidget = '<aside id="%1$s" class="widget %2$s">';
-		//shows html after widget
-		$afterWidget = '</aside>';
-		//html to wrap widget title
-		$beforeTitle = '<h2 class="widget-title"><span>';
-		$afterTitle  = '</span></h2>';
-
-
-		register_sidebar( array(
-			'name'          => esc_html__( 'General Widget Area', 'start' ),
-			'id'            => 'sidebar-1',
-			'before_widget' => $beforeWidget,
-			'after_widget'  => $afterWidget,
-			'before_title'  => $beforeTitle,
-			'after_title'   => $afterTitle,
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer Column 1', 'start' ),
-			'id'            => 'footer-1',
-			'before_widget' => $beforeWidget,
-			'after_widget'  => $afterWidget,
-			'before_title'  => $beforeTitle,
-			'after_title'   => $afterTitle,
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer Column 2', 'start' ),
-			'id'            => 'footer-2',
-			'before_widget' => $beforeWidget,
-			'after_widget'  => $afterWidget,
-			'before_title'  => $beforeTitle,
-			'after_title'   => $afterTitle,
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer Column 3', 'start' ),
-			'id'            => 'footer-3',
-			'before_widget' => $beforeWidget,
-			'after_widget'  => $afterWidget,
-			'before_title'  => $beforeTitle,
-			'after_title'   => $afterTitle,
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Footer Column 4', 'start' ),
-			'id'            => 'footer-4',
-			'before_widget' => $beforeWidget,
-			'after_widget'  => $afterWidget,
-			'before_title'  => $beforeTitle,
-			'after_title'   => $afterTitle,
-		) );
-	}
-endif;
-add_action( 'widgets_init', 'start_action_theme_widgets_init' );
-
-
 /**
  * Generate dynamic styles
  */

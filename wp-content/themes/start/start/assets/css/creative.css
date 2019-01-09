@@ -227,6 +227,7 @@ header .header-content .header-content-inner p {
 }
 .section-heading {
   margin-top: 0;
+  letter-spacing: 0;
 }
 .service-box {
   max-width: 400px;
@@ -296,6 +297,11 @@ header .header-content .header-content-inner p {
 }
 .call-to-action h2 {
   margin: 0 auto 20px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  letter-spacing: 1px;
 }
 .text-primary {
   color: #F05F40;
@@ -444,4 +450,10 @@ hr {
 }
 .navbar-nav li {
   text-align: left;
+}
+.fa-3x {
+  font-size: 4em;
+}
+#contact p {
+  margin-bottom: 20px;
 }

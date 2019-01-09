@@ -783,11 +783,35 @@ $options = array(
 						'type'    => 'group',
 						'attr'    => array( 'class' => 'border-bottom-none' ),
 						'options' => array(
+							'title'          => array(
+								'label' => esc_html__( 'Title', 'start' ),
+								'desc'  => esc_html__( 'Please enter the title text', 'start' ),
+								'type'  => 'textarea',
+								'value' => 'Lets Get In Touch!',
+							),
+							'text'          => array(
+								'label' => esc_html__( 'Text', 'start' ),
+								'desc'  => esc_html__( 'Please enter the text', 'start' ),
+								'type'  => 'textarea',
+								'value' => 'Some text',
+							),
 							'copyright'          => array(
 								'label' => esc_html__( 'Copyright', 'start' ),
 								'desc'  => esc_html__( 'Please enter the copyright text', 'start' ),
 								'type'  => 'textarea',
 								'value' => 'Magazine WordPress Theme made by <a rel="nofollow" href="https://themefuse.com/" target="_blank">ThemeFuse</a>',
+							),
+							'phone'          => array(
+								'label' => esc_html__( 'Phone', 'start' ),
+								'desc'  => esc_html__( 'Please enter the phone', 'start' ),
+								'type'  => 'textarea',
+								'value' => '123-456-6789',
+							),
+							'email'          => array(
+								'label' => esc_html__( 'Email', 'start' ),
+								'desc'  => esc_html__( 'Please enter the email', 'start' ),
+								'type'  => 'textarea',
+								'value' => 'feedback@startbootstrap.com',
 							),
 							'copyright_position' => array(
 								'label'   => esc_html__( 'Position', 'start' ),

@@ -2,35 +2,35 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package start
+ * Contains footer content and the closing of the #main and #page div elements.
  */
-
 ?>
 
-	</div><!-- #content -->
+			</div><!-- /.site-main -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'start' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'start' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'start' ), 'start', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+			<?php start_footer_before(); ?>
 
-<?php wp_footer(); ?>
+			<!-- Footer -->
+			<footer id="colophon" class="site-footer fw-footer" role="contentinfo" itemscope="itemscope"
+					itemtype="http://schema.org/WPFooter">
 
-</body>
+				<?php start_footer_top(); ?>
+
+				<?php start_footer2(); ?>
+
+				<?php start_footer_bottom(); ?>
+
+			</footer>
+
+			<?php start_footer_after(); ?>
+
+		</div><!-- /#page -->
+
+		<?php start_body_bottom(); ?>
+
+		<?php wp_footer(); ?>
+
+	</body>
+
 </html>
+

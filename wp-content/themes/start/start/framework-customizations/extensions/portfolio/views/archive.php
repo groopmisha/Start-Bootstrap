@@ -32,7 +32,7 @@ if ( $sidebar_position == 'left' || $sidebar_position == 'right' ) {
 
 start_header_image(); //get header image
 ?>
-	<section class="fw-main-row <?php start_get_content_class( 'main', $sidebar_position ); ?>">
+	<section class="fw-main-row static <?php start_get_content_class( 'main', $sidebar_position ); ?>">
 		<div class="fw-container">
 			<div class="fw-row">
 				<?php start_content_before(); ?>
@@ -41,9 +41,6 @@ start_header_image(); //get header image
 					<div class="fw-col-inner">
 						<?php start_content_top(); ?>
 
-						<?php if ( function_exists( 'fw_ext_breadcrumbs' ) ) {
-							fw_ext_breadcrumbs();
-						} ?>
 						<div class="fw-portfolio fw-portfolio-1 <?php echo esc_attr( $colums_number ); ?> fw-portfolio-content-position-middle fw-portfolio-content-align-center  fw-portfolio-landscape">
 
 							<?php start_portfolio_filter( $filter_enabled, $uniqid ); //display portfolio filter ?>

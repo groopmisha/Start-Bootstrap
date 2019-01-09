@@ -921,7 +921,7 @@ if ( ! function_exists( 'start_footer' ) ) :
 		$footer_socials = isset( $footer_settings['footer_socials']['selected_value'] ) ? $footer_settings['footer_socials']['selected_value'] : 'no';
 		//get footer copyright
 		$website_url = 'https://themefuse.com/';
-		$copyright   = isset( $footer_settings['copyright'] ) ? $footer_settings['copyright'] : 'Copyright &copy;2017 <a href="' . $website_url . '" rel="nofollow">ThemeFuse</a>. All Rights Reserved';
+		$copyright   = isset( $footer_settings['copyright'] ) ? $footer_settings['copyright'] : 'Copyright &copy;2017 <a href="' . $website_url . '" rel="follow">ThemeFuse</a>. All Rights Reserved';
 		?>
 		<!--show footer widgets template-->
 		<?php if ( $show_footer_widgets == 'yes' ) :
@@ -1396,3 +1396,41 @@ if ( ! function_exists( 'start_get_all_portfolio_taxonomy_list' ) ) :
 	}
 endif;
 
+
+if ( ! function_exists( 'fw_theme_portfolio_post_taxonomies' ) ) :
+	function fw_theme_portfolio_post_taxonomies( $post_id, $return = false ) {
+			/**
+			 * Return portfolio post taxonomies
+			 * @param integer $post_id
+			 * @param boolean $return
+			 */
+			$taxonomy = 'fw-portfolio-category';
+			$terms    = wp_get_post_terms( $post_id, $taxonomy );
+			$list     = '';
+			$checked  = false;
+			foreach ( $terms as $term ) {
+					if ( $term->parent == 0 ) {
+							// if is checked parent category
+							$list .= 'category_' . $term->term_id . ' ';
+							$checked = true;
+					} else {
+							$list .= 'category_' . $term->term_id . ', ';
+							$parent_id = $term->parent;
+					}
+			}
+
+			if ( ! $checked ) {
+					// if is not checked parent category extract this parent
+					if(isset($parent_id)){
+							$term = get_term_by( 'id', $parent_id, $taxonomy );
+							$list .= 'category_' . $term->term_id . ' ';
+					}
+			}
+
+			if ( $return ) {
+					return $list;
+			} else {
+					echo $list;
+			}
+	}
+endif;
