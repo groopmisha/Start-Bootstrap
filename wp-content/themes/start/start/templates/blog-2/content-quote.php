@@ -6,7 +6,7 @@
 <?php $permalink = esc_url( get_permalink() ); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( "post clearfix post-list-type-2" ); ?> itemscope="itemscope"
 		 itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-	<?php the_journal_entry_top(); ?>
+	<?php start_entry_top(); ?>
 
 	<header class="entry-header">
 		<span class="post-format"><a class="entry-format"
@@ -16,14 +16,14 @@
 	</header>
 
 	<div class="entry-content clearfix" itemprop="text">
-		<?php the_journal_entry_content_before(); ?>
+		<?php start_entry_content_before(); ?>
 		<?php the_content( '' ); ?>
-		<?php the_journal_entry_content_after(); ?>
+		<?php start_entry_content_after(); ?>
 	</div>
 
 	<footer class="entry-meta clearfix">
-		<?php the_journal_post_meta_blog_2( $post->ID, 'post' ); ?>
+		<?php start_post_meta_blog_2( $post->ID, 'post' ); ?>
 	</footer>
 
-	<?php the_journal_entry_bottom(); ?>
+	<?php start_entry_bottom(); ?>
 </article>

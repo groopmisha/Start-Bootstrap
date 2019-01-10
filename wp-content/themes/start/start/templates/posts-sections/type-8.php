@@ -13,7 +13,7 @@ if ( $query->have_posts() ) :
 		<?php if ( isset( $category->name ) ) : ?>
 			<div class="col-md-12">
 				<div class="lp-category-name-wrap">
-					<h2 class="lp-category-name"><?php echo wp_kses( $category->name, the_journal_allowed_html() ); ?></h2>
+					<h2 class="lp-category-name"><?php echo wp_kses( $category->name, start_allowed_html() ); ?></h2>
 				</div>
 			</div>
 		<?php endif; ?>

@@ -36,5 +36,3 @@
 	<?php get_template_part( 'templates/headers/header' ); //Display theme header ?>
 	<?php start_header_after(); ?>
 	<div id="main" class="site-main">
-
-	

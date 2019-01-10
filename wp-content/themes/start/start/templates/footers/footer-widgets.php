@@ -10,7 +10,7 @@
 		if ( $overlay_bg == 'fw-custom' && ! empty( $footer_settings['show_footer_widgets']['yes']['footer_widgets_bg']['image']['overlay_options']['yes']['background']['color'] ) ) {
 			$overlay_style_footer_widgets = '<div class="fw-main-row-overlay" style="background-color: ' . $footer_settings['show_footer_widgets']['yes']['footer_widgets_bg']['image']['overlay_options']['yes']['background']['color'] . '; opacity: ' . $opacity . ';"></div>';
 		} else {
-			$overlay_style_footer_widgets = '<div class="fw-main-row-overlay the_journal_bg_' . $overlay_bg . '" style="opacity: ' . $opacity . ';"></div>';
+			$overlay_style_footer_widgets = '<div class="fw-main-row-overlay start_bg_' . $overlay_bg . '" style="opacity: ' . $opacity . ';"></div>';
 		}
 	}
 	?>

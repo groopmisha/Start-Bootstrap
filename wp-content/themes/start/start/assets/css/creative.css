@@ -21,6 +21,7 @@ hr {
 }
 hr.light {
   border-color: white;
+  background-color: white;
 }
 a {
   -webkit-transition: all 0.35s;
@@ -56,6 +57,7 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  
 }
 .bg-primary {
   background-color: #F05F40;
@@ -456,4 +458,17 @@ hr {
 }
 #contact p {
   margin-bottom: 20px;
+}
+#about a, .bg-dark a {
+  color: #404040;
+}
+#about .wp-block-separator {
+  border-color: white;
+  background-color: white;
+}
+.service-box h3 {
+  font-size: 24px;
+}
+.fa-4x {
+  font-size: 6em;
 }

@@ -22,12 +22,12 @@ if ( $query->have_posts() ) :
 									<div class="lp-item-content">
 										<?php if ( isset( $category->name ) ) : ?>
 											<div class="lp-category-name-wrap">
-												<h2 class="lp-category-name"><?php echo wp_kses( $category->name, the_journal_allowed_html() ); ?></h2>
+												<h2 class="lp-category-name"><?php echo wp_kses( $category->name, start_allowed_html() ); ?></h2>
 											</div>
 										<?php endif; ?>
 										<h4 class="lp-title"><a
 													href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-										<div class="lp-meta"><?php the_journal_posted_on(); ?></div>
+										<div class="lp-meta"><?php start_posted_on(); ?></div>
 									</div>
 								</div>
 							</div>

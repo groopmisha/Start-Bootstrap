@@ -14,7 +14,7 @@ if ( $query->have_posts() ) :
 		<?php if ( isset( $category->name ) ) : ?>
 			<div class="col-md-12">
 				<div class="lp-category-name-wrap">
-					<h2 class="lp-category-name"><?php echo wp_kses( $category->name, the_journal_allowed_html() ); ?></h2>
+					<h2 class="lp-category-name"><?php echo wp_kses( $category->name, start_allowed_html() ); ?></h2>
 				</div>
 			</div>
 		<?php endif; ?>
@@ -32,7 +32,7 @@ if ( $query->have_posts() ) :
 									<?php the_post_thumbnail(); ?>
 								</a>
 								<a href="<?php the_permalink(); ?>#comments"
-								   class="lp-comments-link"><span><?php echo wp_kses( get_comments_number(), the_journal_allowed_html() ); ?></span></a>
+								   class="lp-comments-link"><span><?php echo wp_kses( get_comments_number(), start_allowed_html() ); ?></span></a>
 							</div>
 						<?php endif; ?>
 						<div class="lp-item-content">
@@ -40,7 +40,7 @@ if ( $query->have_posts() ) :
 								<?php the_excerpt(); ?>
 							</div>
 							<div class="lp-meta">
-								<?php the_journal_posted_on(); ?>
+								<?php start_posted_on(); ?>
 							</div>
 						</div>
 					</div>

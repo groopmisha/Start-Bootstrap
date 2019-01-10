@@ -945,7 +945,3 @@
 return this.ScrollReveal;
 
 }));
-
-
-
-

@@ -24,7 +24,7 @@ if ( $query->have_posts() ) :
 											<h4 class="lp-title"><?php the_title(); ?></h4>
 											<?php if ( isset( $category->name ) ) : ?>
 												<div class="lp-category-name-wrap">
-													<h2 class="lp-category-name"><?php echo wp_kses( $category->name, the_journal_allowed_html() ); ?></h2>
+													<h2 class="lp-category-name"><?php echo wp_kses( $category->name, start_allowed_html() ); ?></h2>
 												</div>
 											<?php endif; ?>
 										</div>
